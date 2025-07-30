@@ -46,7 +46,7 @@ export default function Contact() {
             <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+            Ready to bring your ideas to life? Let&apos;s discuss your next project and create something amazing together.
           </p>
         </motion.div>
 
@@ -59,9 +59,9 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-portfolio-light-accent dark:text-white mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-portfolio-light-accent dark:text-white mb-6">Let&apos;s Connect</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                I'm always interested in hearing about new opportunities, creative projects, or just having a chat about
+                I&apos;m always interested in hearing about new opportunities, creative projects, or just having a chat about
                 technology and development.
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   { icon: Github, href: "#", label: "GitHub" },
                   { icon: Linkedin, href: "#", label: "LinkedIn" },
                   { icon: Twitter, href: "#", label: "Twitter" },
-                ].map((social, index) => (
+                ].map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}

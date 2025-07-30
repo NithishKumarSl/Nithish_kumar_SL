@@ -46,7 +46,7 @@ export default function About() {
             <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with a love for creating digital experiences that make a difference.
+            I&apos;m a passionate full-stack developer with a love for creating digital experiences that make a difference.
             With expertise in modern web technologies, I bring ideas to life through clean code and thoughtful design.
           </p>
         </motion.div>
@@ -60,12 +60,12 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold text-portfolio-light-accent dark:text-white mb-6">My Journey</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              With over 3 years of experience in software development, I've worked on diverse projects ranging from
+              With over 3 years of experience in software development, I&apos;ve worked on diverse projects ranging from
               e-commerce platforms to data visualization tools. My passion lies in solving complex problems and creating
               solutions that users love.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              I believe in continuous learning and staying updated with the latest technologies. When I'm not coding,
+              I believe in continuous learning and staying updated with the latest technologies. When I&apos;m not coding,
               you can find me exploring new frameworks, contributing to open-source projects, or sharing knowledge with
               the developer community.
             </p>

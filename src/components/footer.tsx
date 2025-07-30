@@ -37,7 +37,7 @@ export default function Footer() {
               { icon: Github, href: "#", label: "GitHub" },
               { icon: Linkedin, href: "#", label: "LinkedIn" },
               { icon: Mail, href: "#", label: "Email" },
-            ].map((social, index) => (
+            ].map((social) => (
               <motion.a
                 key={social.label}
                 href={social.href}
@@ -77,10 +77,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-8 pt-8 border-t border-gray-200 dark:border-portfolio-accent/10 text-center"
         >
-          <p className="text-gray-500 dark:text-gray-400 text-sm flex items-center justify-center gap-2">
-            Built with <Heart className="h-4 w-4 text-red-500" /> using Next.js, Tailwind & Framer Motion
-          </p>
-          <p className="text-gray-500 dark:text-gray-400 text-xs mt-2">© 2024 Nithish Kumar. All rights reserved.</p>
+          <p className="text-gray-500 dark:text-gray-400 text-xs mt-2">© 2024 Nithish Kumar<Heart className="h-4 w-4 text-red-500" />. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
