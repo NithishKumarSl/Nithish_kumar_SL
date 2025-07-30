@@ -3,52 +3,48 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react"
+import { Github, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "AI Bill Management Agent",
     description:
-      "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    image: "/placeholder.svg?height=400&width=600&text=E-Commerce Platform",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    github: "#",
-    live: "#",
+      "Multi-agent collaboration system for bill processing, expense categorization, and financial insights using AutoGen and Google Gemini.",
+    image: "/placeholder.svg?height=400&width=600&text=AI Bill Management",
+    technologies: ["AutoGen", "Google Gemini", "Streamlit", "Python"],
+    github: "https://github.com/NithishKumarSl/Agentic_AI_Projects/tree/main/Bill_Managing_Agent",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Smart Health Assistant",
     description:
-      "Collaborative project management tool with real-time updates, team collaboration, and advanced analytics.",
-    image: "/placeholder.svg?height=400&width=600&text=Task Management App",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Redis"],
-    github: "#",
-    live: "#",
+      "Personalized health, diet, and fitness plan generation with specialized AI agents for comprehensive wellness planning.",
+    image: "/placeholder.svg?height=400&width=600&text=Smart Health Assistant",
+    technologies: ["AutoGen", "Google Gemini", "Jupyter", "Python"],
+    github: "https://github.com/NithishKumarSl/Agentic_AI_Projects/tree/main/Smart_Health_Assistant",
     featured: true,
   },
   {
     id: 3,
-    title: "AI Content Generator",
+    title: "LangGraph Math & Q&A Agent",
     description:
-      "AI-powered content creation platform with multiple templates, SEO optimization, and team collaboration features.",
-    image: "/placeholder.svg?height=400&width=600&text=AI Content Generator",
-    technologies: ["Next.js", "OpenAI API", "Tailwind CSS", "Supabase"],
-    github: "#",
-    live: "#",
+      "Intelligent routing between general Q&A and mathematical calculations with custom mathematical functions.",
+    image: "/placeholder.svg?height=400&width=600&text=LangGraph Math Agent",
+    technologies: ["LangGraph", "LangChain", "Google Gemini", "Gradio"],
+    github: "https://github.com/NithishKumarSl/Agentic_AI_Projects/tree/main/Create_an_Agent_Using_LLM_and_Custom_Mathematical_Functions",
     featured: false,
   },
   {
     id: 4,
-    title: "Real Estate Platform",
-    description: "Modern real estate platform with property listings, virtual tours, and advanced search capabilities.",
-    image: "/placeholder.svg?height=400&width=600&text=Real Estate Platform",
-    technologies: ["Vue.js", "NestJS", "PostgreSQL", "AWS S3"],
-    github: "#",
-    live: "#",
+    title: "Multi-Agent RAG System",
+    description: "Intelligent query routing between web search, RAG, and LLM reasoning for comprehensive research.",
+    image: "/placeholder.svg?height=400&width=600&text=Multi-Agent RAG",
+    technologies: ["LangGraph", "LangChain", "Google Gemini", "Streamlit"],
+    github: "https://github.com/NithishKumarSl/Agentic_AI_Projects/tree/main/Multi-Agent_RAG_System",
     featured: false,
   },
 ]
@@ -149,19 +145,9 @@ export default function Projects() {
                     className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white glow-effect font-semibold"
                     asChild
                   >
-                    <a href={projects[currentProject].live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-portfolio-light-accent dark:border-portfolio-accent text-portfolio-light-accent dark:text-portfolio-accent hover:bg-portfolio-light-accent/10 dark:hover:bg-portfolio-accent/10 font-semibold bg-transparent"
-                    asChild
-                  >
                     <a href={projects[currentProject].github} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
-                      Source Code
+                      View Source Code
                     </a>
                   </Button>
                 </div>
@@ -235,11 +221,6 @@ export default function Projects() {
                         <Github className="h-4 w-4" />
                       </a>
                     </Button>
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white" asChild>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -263,6 +244,23 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* View All Projects Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="text-center mt-12"
+        >
+          <Button
+            className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white glow-effect font-semibold px-8 py-3 text-lg"
+            asChild
+          >
+            <a href="/all-projects">
+              View All Projects
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

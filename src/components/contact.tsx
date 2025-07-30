@@ -5,7 +5,7 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, Send, Github, Linkedin, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -69,9 +69,9 @@ export default function Contact() {
             {/* Contact Methods */}
             <div className="space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "nithish@example.com", href: "mailto:nithish@example.com" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-                { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+                { icon: Mail, label: "Primary Email", value: "nithishkumarsl786@gmail.com", href: "mailto:nithishkumarsl786@gmail.com" },
+                { icon: Mail, label: "Alternative Email", value: "nithishkumarsl789@gmail.com", href: "mailto:nithishkumarsl789@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+91 6385470340", href: "tel:+916385470340" },
               ].map((contact, index) => (
                 <motion.a
                   key={contact.label}
@@ -103,9 +103,9 @@ export default function Contact() {
               <h4 className="text-lg font-semibold text-portfolio-light-accent dark:text-white mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: Github, href: "#", label: "GitHub" },
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
-                  { icon: Twitter, href: "#", label: "Twitter" },
+                  { icon: Github, href: "https://github.com/NithishKumarSl", label: "GitHub" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/nithishkumarsl786", label: "LinkedIn" },
+                  { icon: Instagram, href: "https://www.instagram.com/nithishkumar.sl?igsh=cWhwM3U4a2hsYmM0", label: "Instagram Personal" },
                 ].map((social) => (
                   <motion.a
                     key={social.label}
@@ -120,6 +120,29 @@ export default function Contact() {
                   </motion.a>
                 ))}
               </div>
+              
+              {/* Business Instagram */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                className="pt-4"
+              >
+                <h4 className="text-lg font-semibold text-portfolio-light-accent dark:text-white mb-4">Business Instagram</h4>
+                <motion.a
+                  href="https://www.instagram.com/sln_art_work?igsh=amI0NDdoM2RucWgx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 p-3 glass-effect rounded-full hover:bg-portfolio-primary/20 transition-all duration-300 group bg-gray-50/80 dark:bg-portfolio-deep-bg/30"
+                >
+                  <Instagram className="h-6 w-6 text-portfolio-light-accent dark:text-gray-300 group-hover:text-portfolio-primary transition-colors duration-300" />
+                  <span className="text-sm font-medium text-portfolio-light-accent dark:text-gray-300 group-hover:text-portfolio-primary transition-colors duration-300">
+                    SLN Art Work
+                  </span>
+                </motion.a>
+              </motion.div>
             </motion.div>
           </motion.div>
 

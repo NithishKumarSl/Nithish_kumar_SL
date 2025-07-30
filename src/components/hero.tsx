@@ -90,9 +90,12 @@ export default function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-portfolio-light-accent dark:border-portfolio-accent text-portfolio-light-accent dark:text-portfolio-accent hover:bg-portfolio-light-accent/10 dark:hover:bg-portfolio-accent/10 transition-all duration-300 font-semibold bg-transparent"
+                asChild
               >
-                <Mail className="mr-2 h-5 w-5" />
-                Contact Me
+                <a href="#contact">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Contact Me
+                </a>
               </Button>
             </motion.div>
 
@@ -104,13 +107,15 @@ export default function Hero() {
               className="flex gap-4 justify-center lg:justify-start mt-8"
             >
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Mail, href: "#" },
+                { icon: Github, href: "https://github.com/NithishKumarSl" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/nithishkumarsl786" },
+                { icon: Mail, href: "mailto:nithishkumarsl786@gmail.com" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-3 rounded-full glass-effect hover:bg-portfolio-primary/20 transition-all duration-300 text-portfolio-light-accent dark:text-white"
