@@ -102,7 +102,7 @@ export default function Games() {
               <span className="gradient-text">Games</span>
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Take a break and enjoy these interactive games I&apos;ve built. From classic games to modern puzzles, there's something for everyone.
+              Take a break and enjoy these interactive games I&apos;ve built. From classic games to modern puzzles, there&apos;s something for everyone.
             </p>
           </motion.div>
         </div>
